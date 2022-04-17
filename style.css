@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css2?family=Varela&display=swap);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  height: 100%;
+  font-size: 10px;
+}
+
+body {
+  font-family: "Varela", sans-serif;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #06113c;
+  color: #fff;
+  background: url("./ivan-cortez-c9aGBqkeoE4-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(5px);
+}
+
+.card-container{
+  text-align: center;
+  background-color: #ff6f00;
+  animation-name: card;
+  animation-duration: 3s;
+  animation-timing-function:ease-out;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+
+@keyframes card {
+  0%{
+    transform: scale(0%);
+  }
+  40%{
+    transform: scale(50%);
+  }
+  70%{
+    transform: scale(30%);
+  }
+  100%{
+    transform: scale(100%);
+  }
+}
+
+.card-container h3{
+  width: 30rem;
+  height: 15rem;
+  background: url('./steven-skerritt-vljZeX-WdQs-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-div {
+  margin-bottom: 2rem;
+}
+
+button {
+  background-color: #054252;
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+#game-value {
+  min-width: 6rem;
+  height: 2.5rem;
+  color: rgb(255, 255, 255);
+  outline: none;
+  text-align: center;
+  background-color:#054252;
+  margin-bottom: 1.5rem;
+}
+
+.reset{
+  margin-bottom: 2rem;
+}
+
+.modal-wrapper {
+  display: none;
+  position: absolute;
+  top: -400px;
+  animation: drop 0.6s ease forwards;
+  background: rgba(0, 0, 0, 1);
+  z-index: 100;
+}
+
+@keyframes drop {
+  0%{
+    opacity: 0;
+  }
+  70%{
+    transform: translateY(800px);
+  }
+  100%{
+    transform: translateY(736px);
+    opacity: 1;
+  }
+}
+.modal {
+  width: 40rem;
+  background-color: rgb(211, 208, 208);
+  color: black;
+  padding: 2.2rem;
+  text-align: center;
+  position: relative;
+}
+.modal-title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+.modal-text {
+  margin-bottom: 2rem;
+}
+.modal-link {
+  display: flex;
+  align-items: center;
+  color: #555;
+  font-size: 1.8rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.modal-link p{
+  margin-right: 1rem;
+}
+
+.layout{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter:blur(5px);
+}
+
+
+footer{
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+  background-color: rgba(255, 255, 255, 0.588);
+  padding: 2rem;
+  color: rgb(46, 46, 47);
+  animation-name: footer;
+  animation-duration: 4s; /* or: Xms */
+  animation-iteration-count: infinite;
+  animation-direction: alternate; /* or: normal */
+  animation-timing-function: linear; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+  animation-fill-mode: forwards;
+}
+
+@keyframes footer {
+  from{
+    transform: translateY(0px);
+  }
+  to{
+    transform: translateY(-20px);
+  }
+}
+
+footer h5{
+  margin-bottom: 1rem;
+}
+
+footer a:not(:last-child){
+  margin-right: 1rem;
+
+}
