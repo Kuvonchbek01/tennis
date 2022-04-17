@@ -30,35 +30,35 @@ body {
   backdrop-filter: blur(5px);
 }
 
-.card-container{
+.card-container {
   text-align: center;
   background-color: #ff6f00;
   animation-name: card;
   animation-duration: 3s;
-  animation-timing-function:ease-out;
+  animation-timing-function: ease-out;
   animation-fill-mode: forwards;
   animation-direction: alternate;
 }
 
 @keyframes card {
-  0%{
+  0% {
     transform: scale(0%);
   }
-  40%{
+  40% {
     transform: scale(50%);
   }
-  70%{
+  70% {
     transform: scale(30%);
   }
-  100%{
+  100% {
     transform: scale(100%);
   }
 }
 
-.card-container h3{
+.card-container h3 {
   width: 30rem;
   height: 15rem;
-  background: url('./steven-skerritt-vljZeX-WdQs-unsplash.jpg');
+  background: url("./steven-skerritt-vljZeX-WdQs-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -83,11 +83,11 @@ button {
   color: rgb(255, 255, 255);
   outline: none;
   text-align: center;
-  background-color:#054252;
+  background-color: #054252;
   margin-bottom: 1.5rem;
 }
 
-.reset{
+.reset {
   margin-bottom: 2rem;
 }
 
@@ -101,13 +101,13 @@ button {
 }
 
 @keyframes drop {
-  0%{
+  0% {
     opacity: 0;
   }
-  70%{
+  70% {
     transform: translateY(800px);
   }
-  100%{
+  100% {
     transform: translateY(736px);
     opacity: 1;
   }
@@ -136,22 +136,21 @@ button {
   margin-bottom: 2rem;
 }
 
-.modal-link p{
+.modal-link p {
   margin-right: 1rem;
 }
 
-.layout{
+.layout {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   width: 100%;
-  backdrop-filter:blur(5px);
+  backdrop-filter: blur(5px);
 }
 
-
-footer{
+footer {
   position: absolute;
   bottom: 5rem;
   right: 5rem;
@@ -167,19 +166,26 @@ footer{
 }
 
 @keyframes footer {
-  from{
+  from {
     transform: translateY(0px);
   }
-  to{
+  to {
     transform: translateY(-20px);
   }
 }
 
-footer h5{
+footer h5 {
   margin-bottom: 1rem;
 }
 
-footer a:not(:last-child){
+footer a:not(:last-child) {
   margin-right: 1rem;
+}
 
+@media (max-width: 600px) {
+  footer {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1rem;
+  }
 }

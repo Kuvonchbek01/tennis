@@ -22,6 +22,7 @@ btn1.addEventListener("click", () => {
       gameOver = true;
       player1.style.color = "green";
       player2.style.color = "red";
+      modalText.textContent = 'Player 1 ✅'
       setTimeout(() =>{
         modal.style.display = 'block'
         layout.style.display = 'block'
