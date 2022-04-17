@@ -108,7 +108,7 @@ button {
     transform: translateY(800px);
   }
   100% {
-    transform: translateY(736px);
+    transform: translateY(600px);
     opacity: 1;
   }
 }

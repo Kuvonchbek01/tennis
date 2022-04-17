@@ -14,6 +14,7 @@ let player2Score = 0;
 let maxscore = +gameLevel.value;
 let gameOver = false;
 const music = new Audio('1.wav')
+const sound = new Audio('3.mp3')
 
 btn1.addEventListener("click", () => {
   if (!gameOver) {
@@ -29,9 +30,10 @@ btn1.addEventListener("click", () => {
         music.play()
       },100)
     }
-
+    
     player1.textContent = player1Score;
   }
+  sound.play()
 });
 
 btn2.addEventListener("click", () => {
@@ -48,23 +50,28 @@ btn2.addEventListener("click", () => {
         music.play()
       },100)
     }
-
     player2.textContent = player2Score;
   }
+  sound.play()
 });
 
 gameLevel.addEventListener("change", () => {
   maxscore = +gameLevel.value;
   func();
+  sound.play()
 });
 
-reset.addEventListener("click", func);
+reset.addEventListener("click", () => {
+  func()
+  sound.play()
+});
 
 modalBtn.addEventListener('click', () => {
   func()
   modal.style.display = 'none'
   layout.style.display = 'none'
   stopMusic()
+  sound.play()
 })
 
 function func() {
